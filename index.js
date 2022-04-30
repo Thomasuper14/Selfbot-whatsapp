@@ -93,11 +93,11 @@ megayaa.on('group-participants-update', async(chat) => {
                 var from = chat.jid
                 var group = await megayaa.groupMetadata(from)
                 if (chat.action == 'add' && public) {
-                     text = `${username}, Wecome to ${group.subject}`
+                     text = `${username}, Benvenuto in ${group.subject}`
                         wa.sendImage(from, photo, text)
                 }
                 if (chat.action == 'remove' && public) {
-                    text = `${username}, Sayonara 👋`
+                    text = `${username}, Ciao Ciao 👋`
                     await wa.sendMessage(from, text)
                 }
             } catch {
